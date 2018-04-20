@@ -211,7 +211,7 @@ namespace crypto {
   }
 struct ec_point_pair {
   ec_point a,b;
-}
+};
 PUSH_WARNINGS
 DISABLE_VS_WARNINGS(4200)
   struct rs_comm {
