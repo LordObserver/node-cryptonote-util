@@ -209,14 +209,14 @@ namespace crypto {
     ge_scalarmult(&point2, &sec, &point);
     ge_tobytes(&image, &point2);
   }
-
+struct ec_point_pair {
+  ec_point a,b;
+}
 PUSH_WARNINGS
 DISABLE_VS_WARNINGS(4200)
   struct rs_comm {
     hash h;
-    struct {
-      ec_point a, b;
-    } ab[];
+    struct ec_point_pair ab[];
   };
 POP_WARNINGS
 
